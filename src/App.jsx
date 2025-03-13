@@ -80,7 +80,7 @@ export default function PomeloDashboard() {
       </div>
 
       <div className="transaction-container">
-        <h3 style={{ display: "flex", color: "#fdcb6e" }}>
+        <h3 style={{ display: "flex", color: "#fa983a" }}>
           <Clock size={25} style={{ marginRight: "10px" }} />{" "}
           <div>Pending Transactions</div>
         </h3>
@@ -119,7 +119,7 @@ export default function PomeloDashboard() {
           </tbody>
         </table>
 
-        <h3 style={{ display: "flex", color: "#55efc4" }}>
+        <h3 style={{ display: "flex", color: "#1dd1a1" }}>
           <CircleCheckBig size={25} style={{ marginRight: "10px" }} />{" "}
           <div>Settled Transactions</div>
         </h3>
