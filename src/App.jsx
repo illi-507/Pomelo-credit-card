@@ -4,7 +4,8 @@ import { Textarea } from "./components/textarea";
 import { Clock, CircleCheckBig, Rows2 } from "lucide-react";
 import "./App.css";
 
-let defaultInput = `{"creditLimit":1000,"events":[{"eventType":"TXN_AUTHED","eventTime":1,"txnId":"t1","amount":123}]}`;
+const defaultInput = `{"creditLimit":1000,"events":[{"eventType":"TXN_AUTHED","eventTime":1,"txnId":"t1","amount":123}]}`;
+
 export default function PomeloDashboard() {
   const [input, setInput] = useState(defaultInput);
   const [errorMsg, setErrorMsg] = useState("");
