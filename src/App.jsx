@@ -119,7 +119,7 @@ export default function PomeloDashboard() {
           </tbody>
         </table>
 
-        <h3 style={{ display: "flex", color: "#1dd1a1" }}>
+        <h3 style={{ display: "flex", color: "#1dd1a1", marginTop: "40px" }}>
           <CircleCheckBig size={25} style={{ marginRight: "10px" }} />{" "}
           <div>Settled Transactions</div>
         </h3>
