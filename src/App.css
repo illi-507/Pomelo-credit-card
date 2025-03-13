@@ -1,10 +1,10 @@
 * {
   font-family: "'Poppins', sans-serif";
-  overflow: hidden;
 }
 
 .app-container {
-  width: 100vw;
+  margin: 0;
+  width: 99vw;
   height: auto;
   display: flex;
   flex-direction: column;
