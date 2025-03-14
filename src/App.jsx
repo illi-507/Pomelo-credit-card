@@ -3,6 +3,7 @@ import { summarize } from "./util/util";
 import { Textarea } from "./components/textarea";
 import { Clock, CircleCheckBig, Rows2 } from "lucide-react";
 import "./App.css";
+import { Samples } from "./data/data";
 
 const defaultInput = `{"creditLimit":1000,"events":[{"eventType":"TXN_AUTHED","eventTime":1,"txnId":"t1","amount":123}]}`;
 
@@ -30,14 +31,35 @@ export default function PomeloDashboard() {
 
   console.log("type: ", typeof summary.availableCredit);
 
+  function handleSampleInput(index) {
+    setInput(JSON.stringify(Samples[index]));
+  }
   return (
     <div className="app-container">
       <h1>Credit Card Dashboard Simulation Platform</h1>
-      <Textarea
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        errorMsg={errorMsg}
-      />
+      <div className="user-input-secton">
+        <Textarea
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          errorMsg={errorMsg}
+        />
+        <div className="sample-input-container">
+          Sample Inputs:
+          <div className="sample-input">
+            {Samples.map((item, index) => {
+              return (
+                <div
+                  className="input-card"
+                  key={index}
+                  onClick={() => handleSampleInput(index)}
+                >
+                  {index}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
 
       <div className="balance-section-container">
         <div className="available-credit">
