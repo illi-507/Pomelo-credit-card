@@ -44,7 +44,8 @@ export default function PomeloDashboard() {
           errorMsg={errorMsg}
         />
         <div className="sample-input-container">
-          Sample Inputs:
+          Sample Inputs:{" "}
+          <span style={{ fontSize: "13px" }}>(Click to simulate)</span>
           <div className="sample-input">
             {Samples.map((item, index) => {
               return (
